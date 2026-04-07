@@ -1,0 +1,18 @@
+
+        #aallot
+        wave_count = random.randint(50,100)
+        wave_color = random_color()
+        for _ in range(wave_count):
+            #satunnainen sijainti meren sisällä
+            y = random.randint(horizon, horizon + sea_height)
+
+            #satunnainen pituus ja aloituspiste
+            wave_length = random.randint(20, SCREEN_WIDTH//3)
+            x_start = random.randint(0, SCREEN_WIDTH - wave_length)
+            x_end = x_start + wave_length
+
+            draw.line(
+                (x_start, y, x_end, y),
+                fill=wave_color,
+                width=1
+            )
